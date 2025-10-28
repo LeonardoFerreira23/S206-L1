@@ -1,0 +1,23 @@
+{
+  "name": "s206-l1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonardoFerreira23/S206-L1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonardoFerreira23/S206-L1/issues"
+  },
+  "homepage": "https://github.com/LeonardoFerreira23/S206-L1#readme",
+  "description": "",
+  "dependencies": {
+    "cypress": "^15.5.0"
+  }
+}
