@@ -8,7 +8,7 @@ Repositório dedicado para a matéria de S206
  # Como Executar o Projeto
  Siga os passos abaixo para rodar a suíte de testes e gerar o relatório
 
- ** Pré-requisitos
+ **Pré-requisitos
 - Node.js(NPM)
 
 1 - Clone o repositório :
@@ -27,9 +27,11 @@ npm install
 3 - Execute os testes de atividades
 
 ```Markdown
-npx cypress run --spec "cypress/e2e/listaS206.cy.js"
+npx cypress run --spec "cypress/e2e/lista1.cy.js"
 ```
 
 Após a execução, o relatório em HTML será gerado automaticamente.
+
 Você pode encontrá-lo na seguinte pasta: cypress/reports/index.html
+
 Basta abrir o arquivo index.html em qualquer navegador para ver os resultados detalhados de cada teste.
