@@ -49,7 +49,7 @@ Para rodar este projeto na sua máquina:
 
 Abaixo, a evidência da execução de todos os cenários via *Collection Runner* do Postman:
 
-![Resultado dos Testes](./resultado_testes.png)
+![Resultado dos Testes](./resultado_teste.png)
 
 ---
 
