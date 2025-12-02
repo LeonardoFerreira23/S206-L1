@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "c072e631-6b15-42fa-8175-276238564a97",
+		"name": "postman_lista2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49961548",
+		"_collection_link": "https://leonardoferreira23-2803071.postman.co/workspace/Leonardo-S.-Ferreira's-Workspac~d2761bdf-7cae-48ab-84cc-aa7feda7575c/collection/49961548-c072e631-6b15-42fa-8175-276238564a97?source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Listar usuarios",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://serverest.dev/usuarios",
+					"protocol": "https",
+					"host": [
+						"serverest",
+						"dev"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"nome\": \"Shana Garcia\", \r\n\"email\": \"ShanaG{{$randomInt}}@qa.com\", \r\n\"password\": \"teste\", \r\n\"administrador\": \"true\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serverest.dev/usuarios",
+					"protocol": "https",
+					"host": [
+						"serverest",
+						"dev"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Token gerado\", function () \r",
+							"{ pm.expect(pm.response.json()).to.have.property('authorization'); });"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"email\": \"ShanaG327@qa.com\", \r\n\"password\": \"teste\" \r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://serverest.dev/login",
+					"protocol": "https",
+					"host": [
+						"serverest",
+						"dev"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
